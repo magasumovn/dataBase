@@ -1,0 +1,12 @@
+> use mybase
+> db.autobase.find()
+> db.autobase.update({model: 'Hyundai' }, {$push:{shop:'First'}})
+> db.autobase.update({model: 'Hyundai' }, {$push:{shop:'Second'}})
+> db.autobase.update({model: 'Hyundai' }, {$push:{shop:'Third'}})
+> db.autobase.find()
+> db.autobase.update({model: 'Hyundai' }, {$pop:{shop:1}})
+> db.autobase.find()
+> db.autobase.update({model: 'Hyundai' }, {$pull:{shop:'First'}})
+> db.autobase.find()
+> db.autobase.update({model: 'Audi' }, {$set:{"shops.0":'Test'}})
+> db.autobase.find()
